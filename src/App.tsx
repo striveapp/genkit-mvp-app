@@ -117,7 +117,7 @@ const ProblemInput = (props: ParentProps<{ onProblem: (problem: Problem) => void
     const [name, setName] = createSignal('')
     const [role, setRole] = createSignal('')
     const [struggle, setStruggle] = createSignal('')
-    console.log('foo')
+
     return <form onSubmit={noop}>
         <h2>Hey <Input id='name' onInput={setName} />, what are you struggling with, today?</h2>
         <p>
