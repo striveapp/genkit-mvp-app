@@ -1,0 +1,80 @@
+header {
+    text-align: center;
+}
+
+header h1 {
+    font-size: 4em;
+    font-weight: 100;
+    color: white;
+}
+
+main {
+    font-weight: 200;
+    font-size: 125%;
+    color: white;
+    margin: 1rem;
+}
+
+form {
+    font-size: 1.5rem;
+}
+
+input[type=text] {
+    border-bottom: 1px solid white;
+    font-style: italic;
+    width: 50vw;
+    background-color: #ffffff11;
+}
+
+textarea {
+    background-color: #ffffff11;
+    width: 100%;
+    min-height: 25vh;
+    border-bottom: 1px solid white;
+    font-style: italic;
+}
+
+main h2,
+main p {
+    margin-bottom: 2rem;
+    line-height: 150%;
+}
+
+main h3 {
+    font-size: 200%;
+    margin-top: 3rem;
+}
+
+main ul {
+    margin-bottom: 2rem;
+}
+
+
+aside,
+form footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+aside p {
+    margin-bottom: 0;
+}
+
+button {
+    background-color: #ffffff11;
+    border: 1px solid white;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    cursor: pointer;
+    color: white;
+}
+
+ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+li {
+    padding-left: 2rem;
+}

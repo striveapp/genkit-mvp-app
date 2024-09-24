@@ -1,0 +1,13 @@
+html {
+    font-family: "Inter Tight", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    --primary-deep-blue: #004F8C;
+    --primary-vibrant-green: #00A86B;
+    --secondary-sky-blue: #6CCFF6;
+    --secondary-soft-teal: #70BFA9;
+    --accent-light-gray: #F0F0F0;
+    --accent-dark-charcoal: #2E2E2E;
+    background: linear-gradient(to bottom, var(--primary-deep-blue), var(--primary-vibrant-green));
+    min-height: 100%;
+}
