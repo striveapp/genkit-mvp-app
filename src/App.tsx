@@ -12,20 +12,20 @@ type Recommendation = {
 
 const fetchRecommendation =
     async (problem: Problem): Promise<null | Recommendation> => {
-        const res = await fetch(new URL('/api/streamAction', SERVICE_URL), {
+        const res = await fetch(new URL('/striveFlow', SERVICE_URL), {
             "credentials": "omit",
             "headers": {
                 "Content-Type": "application/json",
             },
             "body": JSON.stringify(
-                { "key": "/flow/striveFlow", "input": { "start": { "input": { "role": problem.role, "problem": problem.struggle } } } }
+                { "data": { "role": problem.role, "problem": problem.struggle } }
             ),
             "method": "POST",
             "mode": "cors"
         });
         const result = await res.json()
         try {
-            const recommendation: Recommendation = JSON.parse(result.result.operation.result.response.slice(8, -3))
+            const recommendation: Recommendation = JSON.parse(result.result.slice(8, -3))
             return recommendation
         } catch (err) {
             console.error(err)
