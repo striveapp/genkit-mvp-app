@@ -10,8 +10,9 @@ for (const [k, v] of Object.entries(define)) {
 }
 // https://vitejs.dev/config/
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [solidPlugin()],
+  base: mode === "production" ? "/genkit-mvp-app/" : "/",
   preview: {
     host: "localhost",
     port: 8080,
@@ -22,4 +23,4 @@ export default defineConfig({
   },
   // string values will be used as raw expressions, so if defining a string constant, it needs to be explicitly quoted
   define,
-});
+}));
