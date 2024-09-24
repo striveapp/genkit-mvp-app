@@ -31,6 +31,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build
+        env:
+          SERVICE_URL: ${{ vars.SERVICE_URL }}
         run: |
           npm run build
           cp -r static dist

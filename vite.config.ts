@@ -4,6 +4,9 @@ import solidPlugin from "vite-plugin-solid";
 
 const define = {
   BUILD_TIME: JSON.stringify(new Date().toISOString()),
+  SERVICE_URL: JSON.stringify(
+    process.env.SERVICE_URL ?? "http://localhost:4000"
+  ),
 };
 for (const [k, v] of Object.entries(define)) {
   console.debug(`[vite define] ${k}:`, v);

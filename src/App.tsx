@@ -12,7 +12,7 @@ type Recommendation = {
 
 const fetchRecommendation =
     async (problem: Problem): Promise<null | Recommendation> => {
-        const res = await fetch("http://localhost:4000/api/streamAction", {
+        const res = await fetch(new URL('/api/streamAction', SERVICE_URL), {
             "credentials": "omit",
             "headers": {
                 "Content-Type": "application/json",
