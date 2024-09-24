@@ -42,7 +42,7 @@ export const App = () => {
 
     return <>
         <header>
-            <img src='/static/logo.png' width={150} style={{ margin: '0.5rem' }} />
+            <img src={`${import.meta.env.BASE_URL}static/logo.png`} width={150} style={{ margin: '0.5rem' }} />
             <h1 class='inter-tight-thin'>STRIVE</h1>
         </header>
         <main>
